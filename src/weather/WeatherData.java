@@ -60,4 +60,20 @@ public class WeatherData {
     public double[] getCloudCover() {
         return cloudCover;
     }
+
+    public double getAvgTempHigh() {
+        double sum = 0;
+        for ( int i = 0; i < tempHigh.length; i++) {
+            sum = sum + tempHigh[i];
+        }
+        return ( sum / (tempHigh.length));
+    }
+    public double getAvgPrecipitation() {
+        double sum = 0;
+        for ( int i = 0; i < precipitation.length; i++) {
+            sum = sum + precipitation[i];
+        }
+        return ( sum / (precipitation.length));
+    }
 }
+
