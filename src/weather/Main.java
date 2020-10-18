@@ -29,6 +29,7 @@ public class Main {
             minSlope);
         interpretations.precipitationSlopeInterpretation();
         interpretations.minAndMaxSlopeInterpretation();
+        //output printed out
     }
 }
 
