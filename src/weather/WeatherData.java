@@ -1,6 +1,7 @@
 package weather;
 
 public class WeatherData {
+
     private int year;
     private double tempHigh[];
     private double tempLow[];
@@ -27,7 +28,7 @@ public class WeatherData {
 
     public void setAvgTemp(int month, double temp) {
         avgTemp[month] = temp;
-        System.out.println(avgTemp[month]);
+        //System.out.println(avgTemp[month]);
     }
 
     public void setPrecipitation(int month, double temp) {
@@ -37,6 +38,7 @@ public class WeatherData {
     public void setCloudCover(int month, double temp) {
         cloudCover[month] = temp;
     }
+
     public int getYear() {
         return year;
     }
@@ -60,4 +62,30 @@ public class WeatherData {
     public double[] getCloudCover() {
         return cloudCover;
     }
+
+    public double getAvgTempHigh() {
+        double sum = 0;
+        for (int i = 0; i < tempHigh.length; i++) {
+            sum = sum + tempHigh[i];
+        }
+        return (sum / (tempHigh.length));
+    }
+
+    public double getAvgPrecipitation() {
+        double sum = 0;
+        for (int i = 0; i < precipitation.length; i++) {
+            sum = sum + precipitation[i];
+        }
+        return (sum / (precipitation.length));
+    }
+
+    public double getAvgTempLow() {
+        double sum = 0;
+        for (int i = 0; i < tempLow.length; i++) {
+            sum = sum + tempLow[i];
+        }
+        return (sum / (tempLow.length));
+    }
 }
+
+
